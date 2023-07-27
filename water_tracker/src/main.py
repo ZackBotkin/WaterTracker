@@ -1,8 +1,8 @@
 import argparse
 
-from tmp.src.config.config import Configs
-from tmp.src.context_manager import ContextManager
-from tmp.src.interactive.main_menu import MainMenu
+from water_tracker.src.config.config import Configs
+from water_tracker.src.context_manager import ContextManager
+from water_tracker.src.interactive.main_menu import MainMenu
 
 def main():
 
