@@ -6,3 +6,4 @@ class ContextManager(object):
     def __init__(self, configs):
         self.config = configs
         self.query_runner = QueryRunner(configs)
+        self.create_all_tables()

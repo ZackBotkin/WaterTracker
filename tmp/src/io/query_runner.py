@@ -20,6 +20,9 @@ class QueryRunner(object):
         results = query.fetchall()
         return results
 
+    def create_all_tables(self):
+        self.create_table()
+
     def create_table(self):
         sql_str = "CREATE TABLE test(date DATE, count INT)"
         try:
