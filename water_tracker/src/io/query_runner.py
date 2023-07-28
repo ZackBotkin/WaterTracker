@@ -37,6 +37,8 @@ class QueryRunner(object):
         sql_str = "INSERT INTO waters ('date', 'count') VALUES ('%s', '%s')" % (date, count)
         self.run_sql(sql_str)
 
-    def get_waters(self):
+    def get_waters(self, date=None):
         sql_str = "SELECT * FROM waters"
+        if date is not None:
+            sql_str += " WHERE date = '%s'" % date
         return self.fetch_sql(sql_str)

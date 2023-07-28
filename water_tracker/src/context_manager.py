@@ -11,6 +11,13 @@ class ContextManager(object):
     def record_water(self, count):
         self.query_runner.insert_water(count)
 
-    def get_waters(self):
-        waters = self.query_runner.get_waters()
+    def get_waters(self, date=None):
+        waters = self.query_runner.get_waters(date)
         return waters
+
+    def get_waters_count(self, date=None):
+        waters = self.query_runner.get_waters(date)
+        count = 0
+        for water in waters:
+            count += water[1]
+        return count
